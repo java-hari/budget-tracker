@@ -1,0 +1,59 @@
+<div class="container">
+    <h2 text-center>Add User</h2>
+    <form [formGroup]="addUserData" style="margin-top: 20px; width: 500px;">
+        <div class="form-group  mb-3">
+            <label>First Name:</label>
+            <input type="text" class="form-control" formControlName="firstName" placeholder="Enter first name">
+            @if(addUserData.controls['firstName']?.dirty || addUserData.controls['firstName']?.touched) {
+                @if(addUserData.controls['firstName']?.errors?.['required']) {
+                <div class="text-danger">First name is required.</div>            
+                }
+            }
+        </div>
+        <div class="form-group  mb-3">
+            <label>Last Name:</label>
+            <input type="text" class="form-control" formControlName="lastName" placeholder="Enter last name">
+            @if(addUserData.controls['lastName']?.dirty || addUserData.controls['lastName']?.touched) {
+            @if(addUserData.controls['lastName']?.errors?.['required']) {
+            <div class="text-danger">Last name is required.</div>
+            }
+            }
+        </div>
+        <div class="form-group  mb-3">
+            <label>Username:</label>
+            <input type="text" class="form-control" formControlName="username" placeholder="Enter username">
+            @if(addUserData.controls['username']?.dirty || addUserData.controls['username']?.touched) {
+            @if(addUserData.controls['username']?.errors?.['required']) {
+            <div class="text-danger">Username is required.</div>
+            }
+            }
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Password:</label>    
+            <input type="password" class="form-control" formControlName="password" placeholder="Enter password">
+            @if(addUserData.controls['password']?.dirty || addUserData.controls['password']?.touched) {
+                @if(addUserData.controls['password']?.errors?.['required']) {
+                <div class="text-danger">Password is required.</div>            
+                }
+            }               
+            </div>
+            <div class="form-group mb-3">
+                <label>Confirm Password:</label>
+                <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Enter password">
+                @if(addUserData.controls['confirmPassword']?.dirty || addUserData.controls['confirmPassword']?.touched) {
+                @if(addUserData.controls['confirmPassword']?.errors?.['required']) {
+                <div class="text-danger">Confirm password is required.</div>
+                }
+                }
+            </div>
+            <div class="form-group mb-2">   
+                <button style="margin-top: 10px; width: 120px" type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+                <button style="margin-top: 10px; width: 120px" type="submit" class="btn btn-primary" (click)="onSubmit()">Add User</button>
+            </div>
+
+    </form>            
+
+
+
+</div>

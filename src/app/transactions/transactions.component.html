@@ -1,0 +1,64 @@
+<div class="container">
+  <h2>Transactions</h2>
+  <form [formGroup] = "transactionForm">
+
+  
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">sort</th>
+            <th scope="col">
+                <select name="sort"  class="form-control" formControlName="sort" (change)="getTransactionSortBy(transactionForm.get('sort')?.value)">
+                    <option value="">Select a sort option</option>
+                    @for (sortOption of sortData; track sortOption;){
+                    <option value="{{sortOption}}">{{ sortOption }}</option>
+                    }
+                </select>
+                </th>
+            <th scope="col">Card</th>
+            <th scope="col">
+                <select name="cardSelect" class="form-control" formControlName="cardSelect"
+                    (change)="getTransactionByCardType(transactionForm.get('cardSelect')?.value)">
+                    <option value="">Select a Card</option>
+                    @for (cardOption of cardTypes; track cardOption;){
+                    <option value="{{cardOption.value}}">{{ cardOption.name }}</option>
+                    }
+                </select>
+            </th>
+            <th scope="col">Date</th>
+            <th scope="col"><input type="date" class="form-control" formControlName="transactionDate" placeholder="dd/MM/yyyy" (change)="getTransactionByDate()"></th>
+            <th scope="col"><button  class="btn btn-primary" (click)="getReset()">Reset</button></th>
+        </tr>
+    </thead>
+</table>
+</form>
+   <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">commodity</th>
+        <th scope="col">Card</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions; let i = index">
+        <!-- <th scope="row">{{ i + 1 }}</th> -->
+        <td>{{transaction.id}}</td>
+        <td>{{transaction.commodity}}</td>
+        <td>{{transaction.card}}</td>
+        <td>{{transaction.price | number:'1.2-2' | currency:'USD'}}</td>
+        <td>{{transaction.transactionDate | date:'dd-MM-YYYY'}}</td>
+      </tr>
+    </tbody>
+    </table>
+    <p>Total Records: {{totalRecords}} </p>
+<div class="d-flex justify-content-center">
+     @for(item of loopArray; track item;){
+        <button class="btn btn-outline-primary m-1" (click)="getTransactionByPage(item)">{{item}}</button>  
+    }
+ </div>
+     
+    
+</div>

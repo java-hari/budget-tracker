@@ -1,0 +1,115 @@
+<div class="container">
+    <form [formGroup]="expenseForm">
+<!-- 
+        {{today | date:'dd/MM/YYYY'}} -->
+        <h2 class="text-center">Add Expense</h2>
+        <div class="form-group m-8 d-flex">
+            <table class="table table-striped mt-4 table-sm table-responsive" style="width: 100%;">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="form-group m-3">
+                            <label>Commodity</label>
+                        </div>
+                    </td>                    
+                    <td>
+                        <div class="form-group m-2">
+                            <input type="text" class="form-control" placeholder="Enter commodity" formControlName="commodity">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group m-3">
+                            <label>Card</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group m-2">
+                            <select name="card" id="card" class="form-control" formControlName="card">
+                                <option value="">Select a card</option>
+                                @for (card of cards; track card;){
+                                <option value="{{card.name}}">{{ card.name }}</option>
+                                }                            
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group m-3">
+                            <label>Price</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group m-2">
+                            <input type="currency" class="form-control" placeholder="00.00" formControlName="price" format="number:'1.2-2'">
+                        </div>
+                    </td>    
+                    <td>
+                        <div class="form-group m-3">
+                            <label>Date</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group m-2">
+                            <input type="date" class="form-control" formControlName="transactionDate" placeholder="dd/MM/yyyy">
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="form-group m-4 d-flex justify-content-center">    
+            <button type="button" class="btn btn-primary m-1" (click)="onCancel()">Cancel</button>
+            <button type="submit" class="btn btn-primary m-1" *ngIf="!updateMode"  (click)="onSubmit()">Add Expense</button>
+            <button type="button" class="btn btn-primary m-1" *ngIf="updateMode" (click)="onUpdateSubmit()">Update Expense</button>
+        </div>
+
+<!-- {{expenseForm.value.id}} -->
+<!-- {{transactions | json}} -->
+        
+
+        <table class="table table-striped mt-4" *ngIf="transactions && transactions.length > 0">
+            <thead class="table-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Commodity</th>
+                    <th>Card</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (exp of transactions | slice: 0:9; track exp;){
+                <tr>
+                    <td>{{exp.id}}</td>
+                    <td>{{exp.commodity}}</td>
+                    <td>{{exp.card}}</td>
+                    <td>{{exp.price | number:'1.2-2' | currency:'USD'}}</td>
+                    <td>{{exp.transactionDate | date:'dd-MM-YYYY'}}</td>
+                    <td><button type="button" class="btn btn-warning" (click)="onUpdate(exp.id)">Update</button></td>
+                    <td><button type="button" class="btn btn-danger" (click)="onDelete(exp.id)">Delete</button></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+        <!-- alert("Expense List is not null");
+                    <div class="form-group m-2" >
+                        @for(item of expenseList; track item;){
+                            {{item.card}} - {{item.commodity}} - {{item.price}} - {{item.transactionDate | date:'dd-MM-YYYY'}}
+                        }
+                        
+                    </div> -->
+
+
+        <!-- {{expenseForm.value | json}} -->
+
+
+
+
+    </form>
+
+
+</div>
