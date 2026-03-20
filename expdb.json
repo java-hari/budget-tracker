@@ -1,0 +1,74 @@
+{
+  "dailyExpense": [
+    {
+      "id": 2,
+      "commodity": "Fuel",
+      "card": "Chase-CC",
+      "price": 53,
+      "transactionDate": "2024-01-02"
+    },
+    {
+      "id": 3,
+      "commodity": "Diningd",
+      "card": "CITI-CC",
+      "price": 30,
+      "transactionDate": "2024-01-03"
+    },
+    {
+      "id": 4,
+      "commodity": "wal",
+      "card": "BOA-CC",
+      "price": "125",
+      "transactionDate": "2026-03-18"
+    },
+    {
+      "commodity": "costco",
+      "card": "BOA-CC",
+      "price": 12.22,
+      "transactionDate": "2026-03-18",
+      "id": 5
+    },
+    {
+      "commodity": "costco",
+      "card": "BOA-CC",
+      "price": 12.22,
+      "transactionDate": "2026-03-18",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "commodity": "costco",
+      "card": "BOA-CC",
+      "price": "2.22",
+      "transactionDate": "2026-03-18"
+    },
+    {
+      "id": 8,
+      "commodity": "tea",
+      "card": "Chase-CC",
+      "price": "43",
+      "transactionDate": "2026-03-19"
+    },
+    {
+      "id": 9,
+      "commodity": "test",
+      "card": "Chase-CC",
+      "price": "43",
+      "transactionDate": "2026-03-02"
+    },
+    {
+      "id": 10,
+      "commodity": "sdesdd",
+      "card": "Chase-CC",
+      "price": "22",
+      "transactionDate": "2026-03-11"
+    },
+    {
+      "id": 11,
+      "commodity": "testgg",
+      "card": "CITI-CC",
+      "price": "33",
+      "transactionDate": "2026-03-20"
+    }
+  ]
+}

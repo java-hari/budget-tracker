@@ -1,0 +1,24 @@
+
+<div class ="container" style="margin-top: 200px; width: 400px;"  > 
+  <h2 text-center>User Login</h2>
+  <form [formGroup]="loginData" style="margin-top: 20px;" (submit)="onSubmit()">
+    <div class="form-group">
+      <label>Username:</label>
+      <input type="text" class="form-control" formControlName="username" placeholder="Enter username">
+      @if(loginData.controls['username']?.dirty || loginData.controls['username']?.touched) {
+            @if(loginData.controls['username']?.errors?.['required']) {
+            <div class="text-danger">Username is required.</div>            
+            }
+      }
+    </div>
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="password" class="form-control" formControlName="password" placeholder="Enter password">
+      @if(loginData.controls['password'].invalid && loginData.controls['password'].touched) {
+        <div class="text-danger">Password is required.</div>
+      }
+    </div>
+    <button style="margin-top: 10px;" type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+ 
