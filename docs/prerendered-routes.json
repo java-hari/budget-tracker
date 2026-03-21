@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "/budget-tracker": {},
+    "/budget-tracker/add-expense": {},
+    "/budget-tracker/add-user": {},
+    "/budget-tracker/transactions": {},
+    "/budget-tracker/user": {},
+    "/budget-tracker/user-login": {}
+  }
+}
