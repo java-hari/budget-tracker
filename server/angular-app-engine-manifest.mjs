@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'https://github.com/java-hari/budget-tracker',
+  basePath: 'https://java-hari.github.io/budget-tracker',
   allowedHosts: [],
   supportedLocales: {
   "en-US": ""

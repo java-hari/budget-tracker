@@ -3,7 +3,7 @@ export default `<!doctype html>
 <head>
   <meta charset="utf-8">
   <title>19curd</title>
-  <base href="https://github.com/java-hari/budget-tracker/">
+  <base href="https://java-hari.github.io/budget-tracker/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" href="styles-VRDYZCWE.css"></head>
