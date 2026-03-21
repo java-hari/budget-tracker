@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "/java-hari/budget-tracker": {},
+    "/java-hari/budget-tracker/add-expense": {},
+    "/java-hari/budget-tracker/add-user": {},
+    "/java-hari/budget-tracker/transactions": {},
+    "/java-hari/budget-tracker/user": {},
+    "/java-hari/budget-tracker/user-login": {}
+  }
+}
