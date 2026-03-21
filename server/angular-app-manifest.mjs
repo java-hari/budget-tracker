@@ -2,7 +2,7 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: 'https://java-hari.github.io/budget-tracker',
+  baseHref: 'https://java-hari.github.io/budget-tracker/',
   locale: undefined,
   routes: [
   {
@@ -33,13 +33,13 @@ export default {
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 5337, hash: 'adf0f24d9089df560a4dad154d877ab3c72bf37c23d8d81cb682996c8b3e738a', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1309, hash: 'db04596de50466c76e259ad92cd1b598a53d135a3cdafa255309882bd3abd282', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'user/index.html': {size: 18637, hash: 'ac47fcc7515c258101758495773d1e135fdfe2dcbaabfbf3b4f9ff17ad6f9424', text: () => import('./assets-chunks/user_index_html.mjs').then(m => m.default)},
-    'user-login/index.html': {size: 20225, hash: '569ff0b1c7a67d173726111f4d61f3f00b4934a0dc2326e86435427c5cba2d47', text: () => import('./assets-chunks/user-login_index_html.mjs').then(m => m.default)},
-    'add-user/index.html': {size: 21749, hash: '5384cef16cb0ca6035286541d8ffacd30a419a5c19a9acb8e36a012dbd6a6c23', text: () => import('./assets-chunks/add-user_index_html.mjs').then(m => m.default)},
-    'add-expense/index.html': {size: 28084, hash: '76e10ba12bd0b020892c09342f44da1d2f72805433c3cb826e30cdd2dece7bb6', text: () => import('./assets-chunks/add-expense_index_html.mjs').then(m => m.default)},
-    'transactions/index.html': {size: 24738, hash: 'e963c7d80c5b700250c480e7dac8ec9c0410c1cdd13f71855925ac9be6a874f7', text: () => import('./assets-chunks/transactions_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 5338, hash: '6db2ddd3a149e644a0953ff3acd4253b65118b78a87c0051fa9025573162a498', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1310, hash: '75178cb91042464d07438a9bcc6cda4dd9cba5eb4f2883e4f65b702b96e40eab', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'add-user/index.html': {size: 21750, hash: '0ef6775da1ca67a3c42942cd9955455908f92d8f08858611b96d1a5d3e974d34', text: () => import('./assets-chunks/add-user_index_html.mjs').then(m => m.default)},
+    'user/index.html': {size: 18638, hash: 'fabf6df8af1863e3ea13c5080d3c4e06e2dd0e3c1e5bb82e7b94cd8e333eda90', text: () => import('./assets-chunks/user_index_html.mjs').then(m => m.default)},
+    'user-login/index.html': {size: 20226, hash: '2830fbd52ba4d4196d82994e13eb96711385119a8519a2c9d3820dd10f3ab575', text: () => import('./assets-chunks/user-login_index_html.mjs').then(m => m.default)},
+    'transactions/index.html': {size: 24739, hash: '406df7d0a97839b29465613ee49500d3b1b5214ab4de48d067dd6735f23e4b2c', text: () => import('./assets-chunks/transactions_index_html.mjs').then(m => m.default)},
+    'add-expense/index.html': {size: 28085, hash: 'd1a927ca48983310a90f25a22d9538dbb064e1befc6fbd78bbc129a8b8067aa1', text: () => import('./assets-chunks/add-expense_index_html.mjs').then(m => m.default)},
     'styles-VRDYZCWE.css': {size: 230966, hash: 'yJEOwb9t5lw', text: () => import('./assets-chunks/styles-VRDYZCWE_css.mjs').then(m => m.default)}
   },
 };
