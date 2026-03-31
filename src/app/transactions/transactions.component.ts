@@ -18,6 +18,7 @@ export class TransactionsComponent implements OnInit {
   sortData: string[] = ['date', 'price', 'card', 'commodity', 'id'];
 
   cardTypes: any[] = [
+    {name: 'BOA-CA', value: 'BOA-CA'}, 
     {name: 'BOA-CC', value: 'BOA-CC'}, 
     {name: 'Chase-CC', value: 'Chase-CC'},
     {name: 'CITI-CC', value: 'CITI-CC'}
@@ -40,7 +41,7 @@ export class TransactionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.crudService.getExpenseList().subscribe((data: Itransaction[]) => {
-      this.transactions = data.sort((a, b) => (b.id - a.id)).slice(0, 5); // Sort by id in descending order and take first 5 records;      
+      this.transactions = data.sort((a, b) => (b.id - a.id)).slice(0, 15); // Sort by id in descending order and take first 5 records;      
       // this.totalRecords = this.transactions.length;
     });
 
@@ -51,14 +52,14 @@ export class TransactionsComponent implements OnInit {
 getTotalTransactions(){ 
   this.crudService.getExpenseList().subscribe((data: Itransaction[]) => {
     this.totalRecords = data.length;
-    this.totalPages = Math.ceil(this.totalRecords / 5); // Assuming 5 records per page
+    this.totalPages = Math.ceil(this.totalRecords / 15); // Assuming 15 records per page
     this.loopArray = Array(this.totalPages).fill(0).map((x, i) => i + 1); // Create an array [1, 2, ..., totalPages]
   }); 
 }
 
   getTransactionByPage(page: number){
-    const startIndex = (page - 1) * 5;  
-     const endIndex = startIndex + 5;
+    const startIndex = (page - 1) * 15;  
+     const endIndex = startIndex + 15;
     this.crudService.getExpenseList().subscribe((data: Itransaction[]) => {
       this.transactions = data.sort((a, b) => (b.id - a.id)).slice(startIndex, endIndex); // Sort by id in descending order and take records for the current page;      
     });

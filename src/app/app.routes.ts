@@ -4,6 +4,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { AddExpenseComponent } from './add-expense/add-expense.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { ReportsComponent } from './reports/reports.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'user-login', pathMatch: 'full'},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     {path : 'user-login', component: UserLoginComponent},
     {path: "add-expense", component: AddExpenseComponent},
     {path: "transactions", component: TransactionsComponent},
+    {path: "reports", component: ReportsComponent},
     
 ];

@@ -1,74 +1,200 @@
 {
   "dailyExpense": [
     {
+      "id": 1,
+      "commodity": "Mortage",
+      "card": "BOA-CA",
+      "price": "2175.00",
+      "transactionDate": "2026-03-01"
+    },
+    {
       "id": 2,
-      "commodity": "Fuel",
-      "card": "Chase-CC",
-      "price": 53,
-      "transactionDate": "2024-01-02"
+      "commodity": "HOA",
+      "card": "BOA-CA",
+      "price": "69.35",
+      "transactionDate": "2026-03-01"
     },
     {
       "id": 3,
-      "commodity": "Diningd",
+      "commodity": "Costco",
       "card": "CITI-CC",
-      "price": 30,
-      "transactionDate": "2024-01-03"
+      "price": "8.97",
+      "transactionDate": "2026-03-01"
     },
     {
       "id": 4,
-      "commodity": "wal",
-      "card": "BOA-CC",
-      "price": "125",
-      "transactionDate": "2026-03-18"
+      "commodity": "Dominos ",
+      "card": "CITI-CC",
+      "price": "18.08",
+      "transactionDate": "2026-03-01"
     },
     {
-      "commodity": "costco",
-      "card": "BOA-CC",
-      "price": 12.22,
-      "transactionDate": "2026-03-18",
-      "id": 5
+      "id": 5,
+      "commodity": "CITI-CC",
+      "card": "BOA-CA",
+      "price": "227.73",
+      "transactionDate": "2026-03-15"
     },
     {
-      "commodity": "costco",
-      "card": "BOA-CC",
-      "price": 12.22,
-      "transactionDate": "2026-03-18",
-      "id": 6
+      "id": 6,
+      "commodity": "Aldi",
+      "card": "Chase-CC",
+      "price": "7.13",
+      "transactionDate": "2026-03-15"
     },
     {
       "id": 7,
-      "commodity": "costco",
-      "card": "BOA-CC",
-      "price": "2.22",
-      "transactionDate": "2026-03-18"
+      "commodity": "Dominos ",
+      "card": "Chase-CC",
+      "price": "19.56",
+      "transactionDate": "2026-03-15"
     },
     {
       "id": 8,
-      "commodity": "tea",
+      "commodity": "walmart",
       "card": "Chase-CC",
-      "price": "43",
-      "transactionDate": "2026-03-19"
+      "price": "8.38",
+      "transactionDate": "2026-03-15"
     },
     {
       "id": 9,
-      "commodity": "test",
+      "commodity": "Burlington",
       "card": "Chase-CC",
-      "price": "43",
-      "transactionDate": "2026-03-02"
+      "price": "4.64",
+      "transactionDate": "2026-03-15"
     },
     {
       "id": 10,
-      "commodity": "sdesdd",
+      "commodity": "Desi pantry",
       "card": "Chase-CC",
-      "price": "22",
-      "transactionDate": "2026-03-11"
+      "price": "17.67",
+      "transactionDate": "2026-03-15"
     },
     {
       "id": 11,
-      "commodity": "testgg",
+      "commodity": "Publix",
+      "card": "Chase-CC",
+      "price": "5.29",
+      "transactionDate": "2026-03-19"
+    },
+    {
+      "id": 12,
+      "commodity": "Costco",
       "card": "CITI-CC",
-      "price": "33",
-      "transactionDate": "2026-03-20"
+      "price": "2.98",
+      "transactionDate": "2026-03-13"
+    },
+    {
+      "id": 13,
+      "commodity": "Publix",
+      "card": "CITI-CC",
+      "price": "9.89",
+      "transactionDate": "2026-03-13"
+    },
+    {
+      "id": 14,
+      "commodity": "Gas",
+      "card": "CITI-CC",
+      "price": "21.03",
+      "transactionDate": "2026-03-15"
+    },
+    {
+      "id": 15,
+      "commodity": "Costco",
+      "card": "CITI-CC",
+      "price": "50.64",
+      "transactionDate": "2026-03-12"
+    },
+    {
+      "id": 16,
+      "commodity": "Gas",
+      "card": "CITI-CC",
+      "price": "39.94",
+      "transactionDate": "2026-03-12"
+    },
+    {
+      "id": 17,
+      "commodity": "Kohls",
+      "card": "BOA-CC",
+      "price": "7.39",
+      "transactionDate": "2026-03-02"
+    },
+    {
+      "id": 18,
+      "commodity": "Apana Bazar",
+      "card": "Chase-CC",
+      "price": "46.56",
+      "transactionDate": "2026-03-02"
+    },
+    {
+      "id": 19,
+      "commodity": "Aldi",
+      "card": "BOA-CC",
+      "price": "3.95",
+      "transactionDate": "2026-03-03"
+    },
+    {
+      "id": 20,
+      "commodity": "Rewards",
+      "card": "BOA-CC",
+      "price": "224.06",
+      "transactionDate": "2026-03-03"
+    },
+    {
+      "id": 21,
+      "commodity": "RPM Oil change",
+      "card": "BOA-CC",
+      "price": "103.82",
+      "transactionDate": "2026-03-04"
+    },
+    {
+      "id": 22,
+      "commodity": "ADT",
+      "card": "BOA-CC",
+      "price": "63.89",
+      "transactionDate": "2026-03-06"
+    },
+    {
+      "id": 23,
+      "commodity": "Publix",
+      "card": "BOA-CC",
+      "price": "9.46",
+      "transactionDate": "2026-03-07"
+    },
+    {
+      "id": 24,
+      "commodity": "BJS",
+      "card": "BOA-CC",
+      "price": "1.49",
+      "transactionDate": "2026-03-07"
+    },
+    {
+      "id": 25,
+      "commodity": "BJS",
+      "card": "BOA-CC",
+      "price": "5.27",
+      "transactionDate": "2026-03-07"
+    },
+    {
+      "id": 26,
+      "commodity": "Walmart",
+      "card": "BOA-CC",
+      "price": "24.27",
+      "transactionDate": "2026-03-09"
+    },
+    {
+      "id": 27,
+      "commodity": "Aldi",
+      "card": "BOA-CC",
+      "price": "9.31",
+      "transactionDate": "2026-03-09"
+    },
+    {
+      "id": 28,
+      "commodity": "Burlington",
+      "card": "BOA-CC",
+      "price": "-5.55",
+      "transactionDate": "2026-03-10"
     }
   ]
 }

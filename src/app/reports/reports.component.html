@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Reports</h2>
+    <table class="table table-striped mt-4 table-sm table-responsive" style="width: 100%;">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Id</th>              
+                <th scope="col">Card</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Available</th>
+                <th scope="col">Month</th>
+            </tr>
+        </thead>
+       
+        <tbody>
+            <tr *ngFor="let cardDetails of transactionsWithAvailable; let i = index">
+                
+                <td>{{i+1}}</td>
+                <td>{{cardDetails.card}}</td>
+                <td>{{cardDetails.price | currency:'USD'}}</td>
+                <td>{{cardDetails.available - cardDetails.price | currency:'USD'}}</td>
+                <td>{{cardDetails.month}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- {{transactions | json}} -->
+    <!-- {{transactionsWithAvailable | json}} -->
+    
+</div>    

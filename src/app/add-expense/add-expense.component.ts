@@ -19,7 +19,7 @@ export class AddExpenseComponent implements OnInit {
       id: [null],
       commodity: [''],
       card: [''],
-      price: [null],
+      price: [''],
       transactionDate: [''],
     });
   }
@@ -42,6 +42,7 @@ transactions : Itransaction[] = [];
 
   cards: any[] = [
     { name: 'BOA-CC', value: 'BOA-CC' },
+    { name: 'BOA-CA', value: 'BOA-CA' },
     { name: 'Chase-CC', value: 'Chase-CC' },
     { name: 'CITI-CC', value: 'CITI-CC' },
   ]
