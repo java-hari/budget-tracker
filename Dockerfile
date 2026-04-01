@@ -1,19 +1,32 @@
-# Stage 1: Build the Angular application
-FROM node:20-alpine AS development
-WORKDIR /19CURD
-COPY package*.json ./
-RUN npm install
-# Ensure you adjust the 'dist' path based on your 'angular.json' outputPath
-RUN npm install -g @angular/cli
-COPY . .
+# ── Stage 1: Build ──────────────────────────────────────────────
+FROM node:22-alpine AS builder
 
-# Stage 2: Serve the application with Nginx
-#FROM node:lts-slim AS development
-# Copy the built application from the build stage to the Nginx html folder
-# Check your exact output path by running 'ng build' locally if needed
-#COPY  . .
-EXPOSE 4200
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+WORKDIR /app
+
+# Copy manifests first for better layer caching
+COPY package.json package-lock.json ./
+RUN npm ci
+
+# Copy source and build for production
+COPY . .
+RUN npm run build -- --configuration production
+
+# ── Stage 2: Serve ──────────────────────────────────────────────
+FROM nginx:1.27-alpine
+
+# Remove default nginx config
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy built app from stage 1
+# Update 'my-app' to match your Angular project name in angular.json
+COPY --from=builder /app/dist/19curd/browser /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
 
 FROM node:20-alpine
 WORKDIR /19CURD

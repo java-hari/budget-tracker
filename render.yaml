@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: budget-tracker
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    port: 80 # matches nginx EXPOSE
+    envVars:
+      - key: NODE_ENV
+        value: production
