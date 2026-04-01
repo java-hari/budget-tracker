@@ -5,11 +5,11 @@ WORKDIR /app
 
 # Copy manifests first for better layer caching
 COPY package.json package-lock.json ./
-RUN npm ci
+# RUN npm ci
 
 # Copy source and build for production
 COPY . .
-RUN npm run build -- --configuration production
+RUN npm run build -- --configuration production --base-href=/
 
 # ── Stage 2: Serve ──────────────────────────────────────────────
 FROM nginx:1.27-alpine
@@ -29,7 +29,7 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 FROM node:20-alpine
-WORKDIR /19CURD
+WORKDIR /app
 # Install json-server globally
 RUN npm install -g json-server
 # Copy the database file
