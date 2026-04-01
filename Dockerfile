@@ -1,11 +1,11 @@
 # Stage 1: Build the Angular application
-FROM node:lts-slim AS development
+FROM node:20-alpine AS development
 WORKDIR /19CURD
-COPY package.json package-lock.json ./
+COPY package*.json ./
 RUN npm install
-COPY . .
 # Ensure you adjust the 'dist' path based on your 'angular.json' outputPath
-RUN npm run build --configuration=production
+RUN npm install -g @angular/cli
+COPY . .
 
 # Stage 2: Serve the application with Nginx
 #FROM node:lts-slim AS development
