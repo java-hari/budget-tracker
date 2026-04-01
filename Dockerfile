@@ -1,19 +1,19 @@
 # Stage 1: Build the Angular application
-FROM node:20-alpine AS build
+FROM node:lts-slim AS development
 WORKDIR /19CURD
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm install
 COPY . .
 # Ensure you adjust the 'dist' path based on your 'angular.json' outputPath
 RUN npm run build --configuration=production
 
 # Stage 2: Serve the application with Nginx
-FROM nginx:alpine
+#FROM node:lts-slim AS development
 # Copy the built application from the build stage to the Nginx html folder
 # Check your exact output path by running 'ng build' locally if needed
-COPY --from=build /19CURD/dist/budget-tracker/browser /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+#COPY  . .
+EXPOSE 4200
+CMD ["ng", "serve", "--host", "0.0.0.0"]
 
 FROM node:20-alpine
 WORKDIR /19CURD
