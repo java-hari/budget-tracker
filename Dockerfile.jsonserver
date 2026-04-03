@@ -1,0 +1,6 @@
+FROM node:20-alpine
+WORKDIR /app
+RUN npm install -g json-server
+COPY expdb.json ./expdb.json
+EXPOSE 3000
+CMD ["json-server", "--watch", "expdb.json", "--port", "3000", "--host", "0.0.0.0"]

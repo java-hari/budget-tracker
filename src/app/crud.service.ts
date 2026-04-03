@@ -1,13 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Itransaction } from './itransaction';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CrudService {
 
-  base_url : string = "http://localhost:3000/dailyExpense";
+  private base_url : string = `${environment.apiUrl}/dailyExpense`;
+
+  //base_url : string = "http://localhost:3000/dailyExpense";
   constructor(private http : HttpClient) { }
 
   getExpenseList() {

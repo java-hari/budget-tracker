@@ -1,9 +1,19 @@
 services:
   - type: web
-    name: budget-tracker
+    name: budget-tracker-ui
     runtime: docker
     dockerfilePath: ./Dockerfile
     port: 80 # matches nginx EXPOSE
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+# ── JSON Server backend ───────────────────────────
+  - type: web
+    name: budget-tracker-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile.jsonserver
+    port: 3000
     envVars:
       - key: NODE_ENV
         value: production

@@ -27,7 +27,7 @@ export class ReportsComponent implements OnInit {
   } 
 
   ngOnInit() {
-    alert("ReportsComponent : ngOnInit");
+    //alert("ReportsComponent : ngOnInit");
     this.curdService.getExpenseList().subscribe(data => {  
       //alert("ReportsComponent : ngOnInit : getExpenseList : "+JSON.stringify(data));    
       //this.testdata = this.getMonthlyCardTotals(data);
