@@ -4,17 +4,23 @@
         <div class="form-group  mb-3">
             <label>First Name:</label>
             <input type="text" class="form-control" formControlName="firstName" placeholder="Enter first name">
-            @if(addUserData.controls['firstName']?.dirty || addUserData.controls['firstName']?.touched) {
-                @if(addUserData.controls['firstName']?.errors?.['required']) {
+            @if(addUserData.get('firstName')?.dirty || addUserData.get('firstName')?.touched) {
+                @if(addUserData.get('firstName')?.errors?.['required']) {
                 <div class="text-danger">First name is required.</div>            
                 }
             }
+             
+            <!-- @if(addUserData.controls['firstName'].dirty || addUserData.controls['firstName'].touched) {
+                @if(addUserData.controls['firstName'].errors['required']) {
+                <div class="text-danger">First name is required.</div>            
+                }
+            } -->
         </div>
         <div class="form-group  mb-3">
             <label>Last Name:</label>
             <input type="text" class="form-control" formControlName="lastName" placeholder="Enter last name">
-            @if(addUserData.controls['lastName']?.dirty || addUserData.controls['lastName']?.touched) {
-            @if(addUserData.controls['lastName']?.errors?.['required']) {
+            @if(addUserData.get('lastName')?.dirty || addUserData.get('lastName')?.touched) {
+            @if(addUserData.get('lastName')?.errors?.['required']) {
             <div class="text-danger">Last name is required.</div>
             }
             }
@@ -22,8 +28,8 @@
         <div class="form-group  mb-3">
             <label>Username:</label>
             <input type="text" class="form-control" formControlName="username" placeholder="Enter username">
-            @if(addUserData.controls['username']?.dirty || addUserData.controls['username']?.touched) {
-            @if(addUserData.controls['username']?.errors?.['required']) {
+            @if(addUserData.get('username')?.dirty || addUserData.get('username')?.touched) {
+            @if(addUserData.get('username')?.errors?.['required']) {
             <div class="text-danger">Username is required.</div>
             }
             }
@@ -32,8 +38,8 @@
         <div class="form-group mb-3">
             <label>Password:</label>    
             <input type="password" class="form-control" formControlName="password" placeholder="Enter password">
-            @if(addUserData.controls['password']?.dirty || addUserData.controls['password']?.touched) {
-                @if(addUserData.controls['password']?.errors?.['required']) {
+            @if(addUserData.get('password')?.dirty || addUserData.get('password')?.touched) {
+                @if(addUserData.get('password')?.errors?.['required']) {
                 <div class="text-danger">Password is required.</div>            
                 }
             }               
@@ -41,8 +47,8 @@
             <div class="form-group mb-3">
                 <label>Confirm Password:</label>
                 <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Enter password">
-                @if(addUserData.controls['confirmPassword']?.dirty || addUserData.controls['confirmPassword']?.touched) {
-                @if(addUserData.controls['confirmPassword']?.errors?.['required']) {
+                @if(addUserData.get('confirmPassword')?.dirty || addUserData.get('confirmPassword')?.touched) {
+                @if(addUserData.get('confirmPassword')?.errors?.['required']) {
                 <div class="text-danger">Confirm password is required.</div>
                 }
                 }

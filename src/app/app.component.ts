@@ -9,6 +9,6 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = '19curd'; 
+  title = 'budget-tracker'; 
   
 }

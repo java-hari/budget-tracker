@@ -195,6 +195,13 @@
       "card": "BOA-CC",
       "price": "-5.55",
       "transactionDate": "2026-03-10"
+    },
+    {
+      "id": 29,
+      "commodity": "Aldi",
+      "card": "BOA-CC",
+      "price": "3.75",
+      "transactionDate": "2026-04-01"
     }
   ]
 }
